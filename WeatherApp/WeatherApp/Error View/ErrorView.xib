@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ErrorView" customModule="WeatherApp" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="pAt-Uo-upd"/>
+                <outlet property="errorButton" destination="cmb-pF-7hW" id="XfU-e2-V8k"/>
+                <outlet property="errorLabel" destination="Qd5-RA-QiL" id="Jgu-N4-STB"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nxD-1P-ObQ">
+                    <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="data_load_error" translatesAutoresizingMaskIntoConstraints="NO" id="2RV-c1-mow">
+                            <rect key="frame" x="90" y="15" width="120" height="120"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="120" id="Hhz-u5-NaT"/>
+                                <constraint firstAttribute="height" constant="120" id="gO0-QJ-ET6"/>
+                            </constraints>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cmb-pF-7hW">
+                            <rect key="frame" x="105" y="206" width="90" height="41"/>
+                            <color key="backgroundColor" name="AccentColor"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="90" id="1Uo-0u-28s"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                            <state key="normal" title="Reload">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="reloadClicked" destination="-1" eventType="touchUpInside" id="Qph-ud-xtP"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qd5-RA-QiL">
+                            <rect key="frame" x="0.0" y="152" width="300" height="24"/>
+                            <attributedString key="attributedText">
+                                <fragment content="Error info">
+                                    <attributes>
+                                        <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <font key="NSFont" metaFont="system" size="20"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" name="bg-gradient-start"/>
+                    <constraints>
+                        <constraint firstItem="2RV-c1-mow" firstAttribute="top" secondItem="nxD-1P-ObQ" secondAttribute="top" constant="15" id="3QP-nY-ihh"/>
+                        <constraint firstItem="cmb-pF-7hW" firstAttribute="centerX" secondItem="nxD-1P-ObQ" secondAttribute="centerX" id="Cgg-Ka-vil"/>
+                        <constraint firstAttribute="trailing" secondItem="Qd5-RA-QiL" secondAttribute="trailing" id="Gkv-Yg-vbS"/>
+                        <constraint firstItem="Qd5-RA-QiL" firstAttribute="centerX" secondItem="nxD-1P-ObQ" secondAttribute="centerX" id="Mvd-my-GBf"/>
+                        <constraint firstItem="Qd5-RA-QiL" firstAttribute="leading" secondItem="nxD-1P-ObQ" secondAttribute="leading" id="PxS-7A-VvJ"/>
+                        <constraint firstItem="Qd5-RA-QiL" firstAttribute="top" secondItem="2RV-c1-mow" secondAttribute="bottom" constant="17" id="W1v-v2-N1n"/>
+                        <constraint firstItem="cmb-pF-7hW" firstAttribute="top" secondItem="Qd5-RA-QiL" secondAttribute="bottom" constant="30" id="Ybz-LI-qS4"/>
+                        <constraint firstItem="2RV-c1-mow" firstAttribute="centerX" secondItem="nxD-1P-ObQ" secondAttribute="centerX" id="a1U-Un-IXi"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="nxD-1P-ObQ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Der-J4-gQE"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="nxD-1P-ObQ" secondAttribute="bottom" id="Qq1-nx-PLP"/>
+                <constraint firstItem="nxD-1P-ObQ" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="YPK-UZ-r97"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="nxD-1P-ObQ" secondAttribute="trailing" id="kDv-Dn-I0S"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="63.768115942028992" y="49.728260869565219"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="data_load_error" width="45" height="45"/>
+        <namedColor name="AccentColor">
+            <color red="0.9882352941176471" green="0.91764705882352937" blue="0.16078431372549021" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="bg-gradient-start">
+            <color red="0.40000000000000002" green="0.51372549019607838" blue="0.62352941176470589" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
